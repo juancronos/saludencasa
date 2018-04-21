@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Salud En Casa
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -11,4 +11,10 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
+
+  <ul>
+    <li class="text" *ngFor="let item of items | async">
+      {{item.nombre}}
+    </li>
+  </ul>
 </ion-content>
