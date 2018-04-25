@@ -7,10 +7,63 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-card>
+        <ion-card-content>
+          <img src="assets/img/img-icon.png" />
+        </ion-card-content>
+    
+        <ion-item>
+          Salud en casa
+        </ion-item>
+      </ion-card>
+    
+      <ion-list>
+        <ion-item>
+          Niños
+          <button ion-button item-end outline>Outline</button>
+        </ion-item>
+    
+        <ion-item>
+          Mamas
+          <button ion-button item-end outline icon-start>
+            <ion-icon name='star'></ion-icon>
+            Left Icon
+          </button>
+        </ion-item>
+    
+        <ion-item>
+          Adultos
+          <button ion-button item-end outline icon-end>
+            Right Icon
+            <ion-icon name='star'></ion-icon>
+          </button>
+        </ion-item>
+
+        <ion-item>
+            Pomadas
+            <button ion-button item-end outline icon-end>
+              Right Icon
+              <ion-icon name='star'></ion-icon>
+            </button>
+          </ion-item>
+
+          <ion-item>
+              Pastillas
+              <button ion-button item-end outline icon-end>
+                Right Icon
+                <ion-icon name='star'></ion-icon>
+              </button>
+            </ion-item>
+
+            <ion-item>
+                Jarabes
+                <button ion-button item-end outline icon-end>
+                  Right Icon
+                  <ion-icon name='star'></ion-icon>
+                </button>
+              </ion-item>
+
+    </ion-list>
 
   <ul>
     <li class="text" *ngFor="let item of items | async">
