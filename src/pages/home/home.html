@@ -7,63 +7,45 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-card>
-        <ion-card-content>
-          <img src="assets/img/img-icon.png" />
-        </ion-card-content>
-    
-        <ion-item>
-          Salud en casa
-        </ion-item>
-      </ion-card>
-    
-      <ion-list>
-        <ion-item>
-          Niños
-          <button ion-button item-end outline>Outline</button>
-        </ion-item>
-    
-        <ion-item>
-          Mamas
-          <button ion-button item-end outline icon-start>
-            <ion-icon name='star'></ion-icon>
-            Left Icon
-          </button>
-        </ion-item>
-    
-        <ion-item>
-          Adultos
-          <button ion-button item-end outline icon-end>
-            Right Icon
-            <ion-icon name='star'></ion-icon>
-          </button>
-        </ion-item>
+  <ion-card>
+    <ion-card-content>
+      <img src="assets/imgs/main-logo.jpg" />
+    </ion-card-content>
 
-        <ion-item>
-            Pomadas
-            <button ion-button item-end outline icon-end>
-              Right Icon
-              <ion-icon name='star'></ion-icon>
-            </button>
-          </ion-item>
+    <ion-item>
+      Salud en casa
+    </ion-item>
+  </ion-card>
 
-          <ion-item>
-              Pastillas
-              <button ion-button item-end outline icon-end>
-                Right Icon
-                <ion-icon name='star'></ion-icon>
-              </button>
-            </ion-item>
+  <ion-grid>
+    <!--First Row-->
+    <ion-row>
+      <ion-col col-4>
+        <button ion-button item-end outline>Niños</button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button item-end outline>Mamàs</button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button item-end outline>Adultos</button>
+      </ion-col>
+    </ion-row>
+    <!--End First Row-->
 
-            <ion-item>
-                Jarabes
-                <button ion-button item-end outline icon-end>
-                  Right Icon
-                  <ion-icon name='star'></ion-icon>
-                </button>
-              </ion-item>
-
-    </ion-list>
+    <!--Second Row-->
+    <ion-row>
+      <ion-col col-4>
+        <button ion-button item-end outline>Pomadas</button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button item-end outline>Pastillas</button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button item-end outline>Jarabes</button>
+      </ion-col>
+    </ion-row>
+    <!--End secon Row-->
+  </ion-grid>
 
   <ul>
     <li class="text" *ngFor="let item of items | async">
