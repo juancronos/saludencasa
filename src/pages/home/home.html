@@ -21,13 +21,13 @@
     <!--First Row-->
     <ion-row>
       <ion-col col-4>
-        <button ion-button item-end outline>Niños</button>
+        <button ion-button (click)="goToDetail('Niños')" item-end outline>Niños</button>
       </ion-col>
       <ion-col col-4>
-        <button ion-button item-end outline>Mamàs</button>
+        <button ion-button (click)="goToDetail('Mamas')" item-end outline>Mamàs</button>
       </ion-col>
       <ion-col col-4>
-        <button ion-button item-end outline>Adultos</button>
+        <button ion-button (click)="goToDetail('Adultos')" item-end outline>Adultos</button>
       </ion-col>
     </ion-row>
     <!--End First Row-->
@@ -35,13 +35,13 @@
     <!--Second Row-->
     <ion-row>
       <ion-col col-4>
-        <button ion-button item-end outline>Pomadas</button>
+        <button ion-button (click)="goToDetail('Pomadas')" item-end outline>Pomadas</button>
       </ion-col>
       <ion-col col-4>
-        <button ion-button item-end outline>Pastillas</button>
+        <button ion-button (click)="goToDetail('Pastillas')" item-end outline>Pastillas</button>
       </ion-col>
       <ion-col col-4>
-        <button ion-button item-end outline>Jarabes</button>
+        <button ion-button (click)="goToDetail('Jarabes')" item-end outline>Jarabes</button>
       </ion-col>
     </ion-row>
     <!--End secon Row-->
