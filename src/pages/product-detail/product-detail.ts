@@ -21,12 +21,11 @@ export class ProductDetailPage {
   item: Producto;
   itemsInCart: Object[] = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage) {    
+  constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage) {
     this.item = navParams.get('producto');
-    console.log(this.item);    
 
     storage.get('shoppingCart').then((val) => {
-      if(val != null){
+      if (val != null) {
         this.itemsInCart = val;
       }
     });
@@ -36,10 +35,14 @@ export class ProductDetailPage {
     console.log('ionViewDidLoad ProductDetailPage');
   }
 
-  addToCart(){
+  addToCart() {
     this.item.quantityInCart += 1;
     this.itemsInCart.push(this.item);
     this.storage.set('shoppingCart', this.itemsInCart);
-}
+  }
+
+  openCart() {
+    this.navCtrl.push('ShoppingcartPage')
+  }
 
 }

@@ -9,7 +9,7 @@
   <ion-navbar>
     <ion-title>Información Producto</ion-title>
     <ion-buttons right>
-      <button ion-button icon-only>
+      <button ion-button icon-only (click)="openCart()">
           <ion-badge *ngIf="itemsInCart.length">{{itemsInCart.length}}</ion-badge>
           <ion-icon name="cart"></ion-icon>
       </button>

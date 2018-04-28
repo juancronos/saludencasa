@@ -14,8 +14,9 @@ import { Producto } from '../../models/producto';
 export class HomePage {
   itemsCollection: AngularFirestoreCollection<Producto>;
   items:Observable<Producto[]>;
+  itemsInCart: Object[] = [];
 
-  constructor(public navCtrl: NavController, public db: AngularFirestore) {
+  constructor(public navCtrl: NavController, public db: AngularFirestore, private storage: Storage) {
     this.itemsCollection = db.collection<Producto>('Productos');
     this.items = this.itemsCollection.snapshotChanges().map(actions => {
       return actions.map(item => {
@@ -25,9 +26,11 @@ export class HomePage {
       });
     });
 
-
-
-    console.log(this.items);
+    storage.get('shoppingCart').then((val) => {
+      if(val != null){
+        this.itemsInCart = val;
+      }
+    });
   }
 
   goToDetail(category: string){
