@@ -29,7 +29,17 @@ export class HomePage {
 
   goToDetail(category: string){
     console.log(category);
-    this.navCtrl.push('CategoryDetailPage');
+
+    this.itemsCollection = this.db.collection<Producto>('Productos', ref => ref.where('categoria', '==', category));
+    this.items = this.itemsCollection.snapshotChanges().map(actions => {
+      return actions.map(item => {
+        const data = item.payload.doc.data() as Producto;
+        const id = item.payload.doc.id;
+        return { id, ...data };
+      });
+    });
+
+    this.navCtrl.push('CategoryDetailPage', {productos: this.items, categoria: category});
   }
 
 }

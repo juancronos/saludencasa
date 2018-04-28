@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Observable } from 'rxjs/Observable';
+
+import { Producto } from '../../models/producto';
 
 /**
  * Generated class for the CategoryDetailPage page.
@@ -14,8 +17,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'category-detail.html',
 })
 export class CategoryDetailPage {
+  titulo: string;
+  items:Observable<Producto[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.items = navParams.get('productos');
+    this.titulo = navParams.get('categoria');
   }
 
   ionViewDidLoad() {

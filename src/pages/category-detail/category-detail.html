@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>categoryDetail</ion-title>
+    <ion-title>{{titulo}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,4 +15,36 @@
 
 <ion-content padding>
 
+    <ion-card *ngFor="let item of items | async">
+
+        <img src="{{item.foto}}"/>
+    <ion-card-content>
+        <ion-card-title>
+            {{item.nombre}}
+        </ion-card-title>
+        <p>
+            {{item.descripcion}}
+        </p>
+      </ion-card-content>
+  
+      <ion-row no-padding>
+        <ion-col>
+          <button ion-button clear small color="danger" icon-start>
+            <ion-icon name='logo-usd'></ion-icon>
+            15.000
+          </button>
+        </ion-col>
+        
+        <ion-col text-right>
+          <button ion-button clear small color="danger" icon-start>
+            <ion-icon name='share-alt'></ion-icon>
+            Agregar al carrito
+          </button>
+        </ion-col>
+      </ion-row>
+  
+  </ion-card>  
+  
+
+  
 </ion-content>

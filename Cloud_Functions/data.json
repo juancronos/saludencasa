@@ -1,0 +1,54 @@
+{
+	"Productos": [
+        {
+		"carateristicas": ["oral", "acetamenofen"],
+		"categoria": "Niños",
+		"descripcion": "paracetamol (DCI), también conocido como acetaminofén o acetaminofeno, es un fármaco con propiedades analgésicas y antipiréticas utilizado principalmente para tratar la fiebre y el dolor leve y moderado",
+		"foto": "https://www.farmalisto.com.co/95304-large_default/comprar-acetaminofen-500-mg-caja-x-100-tabletas-rx-precio-7706569020659.jpg",
+		"nombre": "Acetaminofén",
+		"volumen": "caja x 2"
+    },
+    {
+		"carateristicas": [ "Tableta","Bayer","Acetil Salicilico Ácido"],
+		"categoria": "Pastillas",
+		"descripcion": "Aspirina 100MG Caja X 28 Tabletas  Reg. San. Nº INVIMA M- 2008 M-000714 R3",
+		"foto": "https://static.wixstatic.com/media/956fc1_6894b6f540a549ddbe3efef1e996feef.jpg/v1/fill/w_498,h_498,al_c,q_90/file.jpg",
+		"nombre": "Aspirina 100",
+		"volumen": "caja x 28"
+    },
+    {
+		"carateristicas": [ "Embarazo","Anti-estrias","crema"],
+		"categoria": "Mamas",
+		"descripcion": "Bepanthol® Crema Antiestrías es una fórmula única con ingredientes naturales que ayudan a hidratar y nutrir la piel cuando esta se estira en el embarazo. ",
+		"foto": "https://loquiero.elembarazo.net/wp-content/uploads/sites/15/2015/11/bepanthol-antiestrias-672x672.jpg",
+		"nombre": "Bephantol Antiestrías",
+		"volumen": "caja x 28"
+    },
+    {
+		"carateristicas": [ "Insomnio","Anti-estres","Sedante"],
+		"categoria": "Adultos",
+		"descripcion": "SOÑODOR 50 mg comprimidos está indicado en el alivio sintomático del insomnio ocasional, particularmente cuando existe dificultad para conciliar el sueño, como en situaciones de intranquilidad, en frecuentes interrupciones durante el sueño o despertar temprano por la mañana.",
+		"foto": "https://farmacialazenia.com/2152-thickbox_default/so%C3%B1odor-50-mg-16-comprimidos.jpg",
+		"nombre": "SOÑODOR 50 mg",
+		"volumen": "caja x 28"
+    },
+    {
+		"carateristicas": [ "Mata Hogos","Topico","crema"],
+		"categoria": "Pomadas",
+		"descripcion": "Canespie Clotrimazol 10 mg/g crema 30 g, se utiliza en el tratamiento del pie de atleta, infección superficial de la piel causada por hongos y localizada entre los pliegues de los dedos del pie.",
+		"foto": "https://farmacialazenia.com/2380-large_default/canespie-clotrimazol-crema-10-mgg-30g.jpg",
+		"nombre": "Clotrimazol Pomada",
+		"volumen": "Pomada 30 gr"
+    },
+    {
+		"carateristicas": [ "Adultos","comprimidos","Efervecesntes"],
+		"categoria": "Jarabes",
+		"descripcion": "Medicamento indicado para la facilitacón de la eliminación del exceso de mocos y flemas que aparecen como sintomas en catarros y gripes.",
+		"foto": "http://riverafarmacia.com/62828-7474-large_default/bisolvon-muco-600-mg-10-comprimidos-efervescentes.jpg",
+		"nombre": "BISOLVON MUCO 600 MG",
+		"volumen": "Botella 600 ML"
+    }
+
+]
+    
+}
