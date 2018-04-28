@@ -5,5 +5,6 @@ categoria: string,
 descripcion: string,
 foto: string,
 nombre: string,
-volumen: string
+volumen: string,
+quantityInCart: number
 }

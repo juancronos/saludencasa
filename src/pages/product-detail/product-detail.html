@@ -8,8 +8,16 @@
 
   <ion-navbar>
     <ion-title>Información Producto</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only>
+          <ion-badge *ngIf="itemsInCart.length">{{itemsInCart.length}}</ion-badge>
+          <ion-icon name="cart"></ion-icon>
+      </button>
+  </ion-buttons>
+  
   </ion-navbar>
 
+  
 </ion-header>
 
 
@@ -36,7 +44,7 @@
       </ion-col>
 
       <ion-col text-right>
-        <button ion-button clear small color="danger" icon-start>
+        <button ion-button clear small color="danger" icon-start (click)="addToCart()">
           <ion-icon name='share-alt'></ion-icon>
           Agregar al carrito
         </button>

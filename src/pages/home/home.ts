@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
+import { Storage } from '@ionic/storage';
 import 'rxjs/add/operator/map';
 
 import { Producto } from '../../models/producto';
@@ -23,6 +24,8 @@ export class HomePage {
         return { id, ...data };
       });
     });
+
+
 
     console.log(this.items);
   }

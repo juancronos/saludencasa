@@ -26,8 +26,7 @@ export class CategoryDetailPage {
   }
 
   openItem(item: Producto){
-    this.navCtrl.push('ProductDetailPage', {producto: item})
-    console.log(item)
+    this.navCtrl.push('ProductDetailPage', {producto: item})    
   }
 
   ionViewDidLoad() {
