@@ -25,6 +25,11 @@ export class CategoryDetailPage {
     this.titulo = navParams.get('categoria');
   }
 
+  openItem(item: Producto){
+    this.navCtrl.push('ProductDetailPage', {producto: item})
+    console.log(item)
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad CategoryDetailPage');
   }

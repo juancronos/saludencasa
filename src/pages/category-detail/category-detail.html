@@ -15,35 +15,15 @@
 
 <ion-content padding>
 
-    <ion-card *ngFor="let item of items | async">
+    <ion-list>
+        <ion-item *ngFor="let item of items | async">          
+          <h2>{{item.nombre}}</h2>
+          <p>$19.880</p>
+          <button ion-button clear item-end (click)="openItem(item)">Abrir</button>
+        </ion-item>
+      </ion-list>
 
-        <img src="{{item.foto}}"/>
-    <ion-card-content>
-        <ion-card-title>
-            {{item.nombre}}
-        </ion-card-title>
-        <p>
-            {{item.descripcion}}
-        </p>
-      </ion-card-content>
-  
-      <ion-row no-padding>
-        <ion-col>
-          <button ion-button clear small color="danger" icon-start>
-            <ion-icon name='logo-usd'></ion-icon>
-            15.000
-          </button>
-        </ion-col>
-        
-        <ion-col text-right>
-          <button ion-button clear small color="danger" icon-start>
-            <ion-icon name='share-alt'></ion-icon>
-            Agregar al carrito
-          </button>
-        </ion-col>
-      </ion-row>
-  
-  </ion-card>  
+    
   
 
   
