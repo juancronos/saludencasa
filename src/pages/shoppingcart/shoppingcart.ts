@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { Producto } from '../../models/producto';
 import { HomePage } from '../home/home';
@@ -19,8 +20,9 @@ import { HomePage } from '../home/home';
 })
 export class ShoppingcartPage {
   itemsInCart: Producto[];
+  paymentString: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage, private iab: InAppBrowser) {
     storage.get('shoppingCart').then((val) => {
       if (val != null) {
         this.itemsInCart = val;
@@ -42,13 +44,20 @@ export class ShoppingcartPage {
     this.storage.set('shoppingCart', this.itemsInCart);
   }
 
-  pagar() {
-
-  }
-
   cancelar() {
     this.storage.clear();
     this.navCtrl.setRoot(HomePage);
+  }
+
+  pagar() {
+    const browser = this.iab.create('https://biz.payulatam.com/L0b02cd15869CEC', "_self", {
+      location: 'no',
+      clearcache: 'yes',
+      hardwareback: 'no',
+    });
+
+    browser.show();
+
   }
 
 }
