@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { User } from "../../models/user";
 import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import firebase from 'firebase';
 
 
@@ -20,10 +21,12 @@ import firebase from 'firebase';
 })
 export class RegisterPage {
   public fireAuth: any;
+  private itemsCollection: AngularFirestoreCollection<User>;
   user = {} as User;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private afAuth: AngularFireAuth) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private afAuth: AngularFireAuth, private afs: AngularFirestore) {
     this.fireAuth = firebase.auth();
+    this.itemsCollection = afs.collection<User>('Users');
   }
 
   ionViewDidLoad() {
@@ -40,7 +43,9 @@ export class RegisterPage {
         user.password
       );
       if (result) {  
-        this.resetPassword(user.email);      
+        this.resetPassword(user.email);
+        user.tipo = "Usuario";
+        this.itemsCollection.add(user);   
         let alert = this.alertCtrl.create({
           title: 'Registro Completo',
           subTitle: 'El registro ha sido exitoso, revise su correo',

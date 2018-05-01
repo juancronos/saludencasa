@@ -4,5 +4,6 @@ export interface User {
     email: string;
     password: string;    
     genero: string,
-    edad: number
+    edad: number,
+    tipo: string
 }

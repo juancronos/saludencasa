@@ -35,9 +35,14 @@ export class LoginPage {
         throw error;
       });;
       if (result) {
-        this.navCtrl.setRoot(HomePage);
+        if(user.email == "juand.torres@udea.edu.co"){
+          console.log("Es administrador");
+          this.navCtrl.setRoot('AdminPage');
+        }else{
+          this.navCtrl.setRoot(HomePage);
+        }        
       }else{
-        
+        this.loginError();
       }
     }
     catch (e) {
