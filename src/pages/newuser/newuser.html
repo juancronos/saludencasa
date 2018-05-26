@@ -1,0 +1,60 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Crear nuevo usario</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>Nombres</ion-label>
+    <ion-input type="text" [(ngModel)]="user.nombres"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Apellidos</ion-label>
+    <ion-input type="text" [(ngModel)]="user.apellidos"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Email Address</ion-label>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+    
+  <ion-item>
+    <ion-label>Genero</ion-label>
+    <ion-select [(ngModel)]="user.genero" interface="popover">
+      <ion-option value="f">Femenino</ion-option>
+      <ion-option value="m">Masculino</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Edad</ion-label>
+    <ion-input type="text" [(ngModel)]="user.edad"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Tipo</ion-label>
+    <ion-select [(ngModel)]="user.tipo" interface="popover">
+      <ion-option value="Administrador">Administrador</ion-option>
+      <ion-option value="Mensajero">Mensajero</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item *ngIf="user.tipo == 'Mensajero'">
+    <ion-label>Horario de trabajo</ion-label>
+    <ion-select [(ngModel)]="user.horario" interface="popover">
+      <ion-option value="A">7 Am - 5 PM</ion-option>
+      <ion-option value="B">7 PM - 7 AM </ion-option>
+      <ion-option value="C">3 PM - 10 PM </ion-option>
+    </ion-select>
+  </ion-item>
+
+
+
+  <button ion-button full (click)="register(user)">Register</button>
+
+</ion-content>

@@ -6,5 +6,6 @@ descripcion: string,
 foto: string,
 nombre: string,
 volumen: string,
-quantityInCart: number
+quantityInCart: number,
+isActive: boolean
 }

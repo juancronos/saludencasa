@@ -48,18 +48,18 @@ export class LoginPage {
     catch (e) {
       console.error(e);
     }
-  }
- 
-  register(){
+}
+
+  register() {
     this.navCtrl.push('RegisterPage');
   }
 
-  loginError(){
+  loginError() {
     let alert = this.alertCtrl.create({
-          title: 'No se pudo ingresar',
-          subTitle: 'Hubo un error, compruebe su correo y contraseña',
-          buttons: ['OK']
-        });
-        alert.present();
+      title: 'No se pudo ingresar',
+      subTitle: 'Hubo un error, compruebe su correo y contraseña',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 }
