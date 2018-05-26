@@ -22,6 +22,7 @@
       <h3>Categoria: {{item.categoria}}</h3>
       <p>Presentación: {{item.volumen}}</p>
       <ion-icon name="trash" (click)="deleteProduct(item)" danger item-right></ion-icon>
+      <ion-icon name="md-create" (click)="editProduct(item)" danger item-right></ion-icon>
     </ion-item>
   </ion-list>
 </ion-content>

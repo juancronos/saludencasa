@@ -42,12 +42,15 @@ export class StockMgrPage {
     this.navCtrl.push('NewProductPage');
   }
 
-  deleteProduct(item){
-    console.log(item.id)
+  deleteProduct(item){    
     this.itemDoc = this.db.doc(`Productos/${item.id}`);
     this.itemDoc.update(
       {isActive: false}
     );
+  }
+
+  editProduct(item){
+    this.navCtrl.push('EditProductPage', {producto: item});    
   }
 
 }
