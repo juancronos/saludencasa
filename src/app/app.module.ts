@@ -10,6 +10,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { IonicStorageModule } from '@ionic/storage';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
+import { Geolocation } from '@ionic-native/geolocation';
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
@@ -45,6 +47,7 @@ const firebaseConfig = {
     StatusBar,
     SplashScreen,
     InAppBrowser,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
